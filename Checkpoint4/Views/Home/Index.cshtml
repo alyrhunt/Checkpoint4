@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Blow Out!";
+}
+
+<img src="~/Content/Images/instruments.jpg" />
+
+<div class="jumbotron">
+    <h1>Welcome to Blow Out!</h1>
+    <p class="lead">We blow our competitors out of the water</p>
+    <br />
+    <p>We allow rentals of new and used instruments!</p>
+    <br />
+
+    <input type="button" class="btn btn-info btn-lg" value="Rentals" onclick="location.href='@Url.Action("Rentals")'" /> |
+    <input type="button" class="btn btn-info btn-lg" value="About" onclick="location.href='@Url.Action("About")'" /> |
+    <input type="button" class="btn btn-info btn-lg" value="Contact" onclick="location.href='@Url.Action("Contact")'" />
+    <br />
+    <br />
+    <blockquote>
+        <p>
+            It's easy to play any musical instrument:
+            all you have to do is touch the right key at the
+            right time and the instrument will play itself
+            <footer>Johann Sebastian Bach</footer>
+        </p>
+    </blockquote>
+</div>
+
+

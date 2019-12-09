@@ -1,0 +1,22 @@
+﻿@model Checkpoint4.Models.Instrument
+@{
+    ViewBag.Title = "Summary";
+}
+
+<h2>Summary</h2>
+
+<br />
+<div>
+    <h4 style="padding-left:50px;">@Html.Raw(ViewBag.Client) , thank you for your order! The details of your order are oulined below:</h4>
+</div>
+<br />
+<div style="padding-left: 100px;">
+    <div>
+        <img src="@Url.Content(String.Format("~/Content/Images/{0}", ViewBag.Image))" width="150" style="margin-bottom:10px;"class="img-rounded">
+    </div>
+    <p><b>Order ID: </b>@Html.ViewBag.OrderID</p>
+    <p><b>Instrument: </b>@Html.ViewBag.Instrument</p>
+    <p><b>Type: </b>@Html.ViewBag.Type</p>
+    <p><b>Monthly Price: </b>$@Html.ViewBag.Price.00</p>
+    <p><b>Amount Paid After 18 Months: </b>$@Html.ViewBag.TotalPrice.00</p>
+</div>

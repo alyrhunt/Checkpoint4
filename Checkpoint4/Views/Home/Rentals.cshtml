@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Checkpoint4.Models.Instrument>
+
+@{
+                /**/
+
+                ViewBag.Title = "Rentals";
+}
+
+<h2 style="padding-bottom: 20px;">Rentals</h2>
+
+
+@foreach (var item in Model)
+{
+    <img src="@Url.Content(String.Format("~/Content/Images/{0}", item.Desc + ".jpg"))" width="150" style="margin-bottom: 10px;" class="img-rounded">
+    <br />
+    <input type="button" class="btn" value="@Html.Raw(item.Type + ' ' + item.Desc)" onclick="location.href='@Url.Action("Create", new { id = item.Instrument_ID })'" />
+    <hr />
+}
+
