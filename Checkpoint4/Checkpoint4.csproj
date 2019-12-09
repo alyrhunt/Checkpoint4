@@ -137,6 +137,7 @@
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\EmailFormModel.cs" />
     <Compile Include="Models\Instrument.cs" />
+    <Compile Include="Models\InstrumentsClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
