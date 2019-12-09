@@ -7,12 +7,40 @@ using System.Web;
 using System.Web.Mvc;
 using Checkpoint4.Models;
 using Checkpoint4.DAL;
+using System.Web.Security;
 
 // Group 2-4: Alyssa Anderson, Nate Bezzant, Rowan Cutler, Kyle Waters
 namespace Checkpoint4.Controllers
 {
     public class HomeController : Controller
+
     {
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(FormCollection form, bool rememberMe = false)
+        {
+            String username = form["Username"].ToString();
+            String password = form["Password"].ToString();
+
+            if (string.Equals(username, "Missouri") && (string.Equals(password, "ShowMe")))
+            {
+                FormsAuthentication.SetAuthCookie(username, rememberMe);
+
+                return RedirectToAction("Index", "Home");
+
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+
+
         private BlowOutContext db = new BlowOutContext();
 
         // GET: Home
