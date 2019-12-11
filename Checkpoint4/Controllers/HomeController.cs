@@ -9,7 +9,7 @@ using Checkpoint4.Models;
 using Checkpoint4.DAL;
 using System.Web.Security;
 
-// Group 2-4: Alyssa Anderson, Nate Bezzant, Rowan Cutler, Kyle Waters, Shrek
+// Group 2-4: Alyssa Anderson, Nate  B ezzant, Rowan  Cutler, Kyle Waters, Shrek
 namespace Checkpoint4.Controllers
 {
     public class HomeController : Controller
